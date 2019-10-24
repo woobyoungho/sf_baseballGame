@@ -26,8 +26,6 @@ public class Check {
 		
 		res.showResult();
 		
-		res.endResult();
-		
 		if(s == res.NO_COUNT) {
 			result = true;
 		}

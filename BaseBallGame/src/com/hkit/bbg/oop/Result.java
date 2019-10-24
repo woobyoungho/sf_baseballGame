@@ -20,10 +20,7 @@ public class Result {
 	
 	public void showResult() {
 		System.out.printf("S : %d, B : %d, O : %d\n", strike, ball, out);
-	}
-	
-	public void endResult(int no_count) {
-		if(this.strike == no_count) {
+		if(this.strike == NO_COUNT) {
 			System.out.println("게임이 끝났습니다.");
 		}
 	}
