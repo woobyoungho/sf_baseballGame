@@ -5,6 +5,7 @@ public class Result {
 	private int strike;
 	private int ball;
 	private int out;
+	private int count = 1;
 	
 	public Result(int no_count) {
 		//NO_COUNT 가 값이 정해지지 않아서 오류가 남
@@ -20,9 +21,16 @@ public class Result {
 	
 	public void showResult() {
 		System.out.printf("S : %d, B : %d, O : %d\n", strike, ball, out);
-		if(this.strike == NO_COUNT) {
-			System.out.println("게임이 끝났습니다.");
-		}
 	}
 	
+	public void countResult() {
+		//하나의 메소드는 하나의 일만 하는 것이 좋다.
+		if(this.strike < NO_COUNT) {
+			count++;
+		} else if(this.strike == NO_COUNT) {
+			System.out.printf("%d번 시도했습니다.\n", count);
+			System.out.println("게임을 종료합니다.");
+		}
+	}
+
 }
